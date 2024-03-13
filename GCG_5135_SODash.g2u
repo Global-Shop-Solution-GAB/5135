@@ -1,0 +1,1903 @@
+Program.Sub.ScreenSU.Start
+Gui.frmDash..Create
+Gui.frmDash..Caption("SO Open Dashboard")
+Gui.frmDash..Size(20775,11100)
+Gui.frmDash..MinX(0)
+Gui.frmDash..MinY(0)
+Gui.frmDash..Position(0,0)
+Gui.frmDash..BackColor(-2147483633)
+Gui.frmDash..MousePointer(0)
+Gui.frmDash..Event(UnLoad,frmDash_UnLoad)
+Gui.frmDash.GsGrid.Create(GsGridControl)
+Gui.frmDash.GsGrid.Size(20325,8220)
+Gui.frmDash.GsGrid.Position(90,1635)
+Gui.frmDash.GsGrid.Event(RowCellClick,GsGrid_RowCellClick)
+Gui.frmDash.cmdExport.Create(Button)
+Gui.frmDash.cmdExport.Size(915,375)
+Gui.frmDash.cmdExport.Position(19485,15)
+Gui.frmDash.cmdExport.Caption("Export")
+Gui.frmDash.cmdExport.Event(Click,cmdExport_Click)
+Gui.frmDash.frameTracking.Create(Frame)
+Gui.frmDash.frameTracking.Size(5355,2445)
+Gui.frmDash.frameTracking.Position(6825,1365)
+Gui.frmDash.frameTracking.Visible(False)
+Gui.frmDash.lbl1.Create(Label,"Select Tracking (dblclick to open)",True,2655,255,0,180,420,True,0,"Arial",8,-2147483633,0)
+Gui.frmDash.lbl1.Parent("frameTracking")
+Gui.frmDash.LstTrack.Create(ListBox)
+Gui.frmDash.LstTrack.Size(2400,1320)
+Gui.frmDash.LstTrack.Position(195,630)
+Gui.frmDash.LstTrack.Parent("frameTracking")
+Gui.frmDash.LstTrack.Event(DblClick,LstTrack_DblClick)
+Gui.frmDash.cmdTrackingExit.Create(Button)
+Gui.frmDash.cmdTrackingExit.Size(855,375)
+Gui.frmDash.cmdTrackingExit.Position(195,2010)
+Gui.frmDash.cmdTrackingExit.Parent("frameTracking")
+Gui.frmDash.cmdTrackingExit.Caption("Exit")
+Gui.frmDash.cmdTrackingExit.Event(Click,cmdTrackingExit_Click)
+Gui.frmDash.cmdSaveFilter.Create(Button)
+Gui.frmDash.cmdSaveFilter.Size(1245,375)
+Gui.frmDash.cmdSaveFilter.Position(135,10005)
+Gui.frmDash.cmdSaveFilter.Caption("Save Filter")
+Gui.frmDash.cmdSaveFilter.Event(Click,cmdSaveFilter_Click)
+Gui.frmDash.cmdReSetFilter.Create(Button)
+Gui.frmDash.cmdReSetFilter.Size(1170,375)
+Gui.frmDash.cmdReSetFilter.Position(1515,10020)
+Gui.frmDash.cmdReSetFilter.Caption("Reset Filter")
+Gui.frmDash.cmdReSetFilter.Event(Click,cmdReSetFilter_Click)
+Gui.frmDash.ddl1.Create(DropDownList)
+Gui.frmDash.ddl1.Visible(False)
+Gui.frmDash.ddl1.Size(1095,330)
+Gui.frmDash.ddl1.Position(15120,300)
+Gui.frmDash.ddlFilter.Create(DropDownList)
+Gui.frmDash.ddlFilter.Size(3495,330)
+Gui.frmDash.ddlFilter.Position(11340,390)
+Gui.frmDash.ddlFilter.Event(Click,ddlFilter_Click)
+Gui.frmDash.frmFilter.Create(Frame)
+Gui.frmDash.frmFilter.Size(14985,7995)
+Gui.frmDash.frmFilter.Position(1305,3150)
+Gui.frmDash.frmFilter.Caption("Filter Maintenance")
+Gui.frmDash.frmFilter.Visible(False)
+Gui.frmDash.GsGridFilter.Create(GsGridControl)
+Gui.frmDash.GsGridFilter.Size(14535,6885)
+Gui.frmDash.GsGridFilter.Position(270,435)
+Gui.frmDash.GsGridFilter.Parent("frmFilter")
+Gui.frmDash.GsGridFilter.Event(RowCellClick,GsGridFilter_RowCellClick)
+Gui.frmDash.cmdclose.Create(Button)
+Gui.frmDash.cmdclose.Size(855,375)
+Gui.frmDash.cmdclose.Position(270,7440)
+Gui.frmDash.cmdclose.Parent("frmFilter")
+Gui.frmDash.cmdclose.Caption("Close")
+Gui.frmDash.cmdclose.Event(Click,cmdclose_Click)
+Gui.frmDash.SelectFilter.Create(Label,"Select Filter",True,1935,255,0,11295,165,True,0,"Arial",8,-2147483633,0)
+Gui.frmDash.cmdMaint.Create(Button)
+Gui.frmDash.cmdMaint.Size(1140,375)
+Gui.frmDash.cmdMaint.Position(11340,750)
+Gui.frmDash.cmdMaint.Caption("Filter Maint")
+Gui.frmDash.cmdMaint.Event(Click,cmdMaint_Click)
+Gui.frmDash.cmdMaint.Zorder(1)
+Gui.frmDash.frameDT.Create(Frame)
+Gui.frmDash.frameDT.Size(1665,1455)
+Gui.frmDash.frameDT.Position(105,60)
+Gui.frmDash.frameDT.Caption("Date Range")
+Gui.frmDash.frameDT.Visible(False)
+Gui.frmDash.dtpfrom.Create(DatePicker)
+Gui.frmDash.dtpfrom.Size(1395,285)
+Gui.frmDash.dtpfrom.Position(150,525)
+Gui.frmDash.dtpfrom.Parent("frameDT")
+Gui.frmDash.dtpTo.Create(DatePicker)
+Gui.frmDash.dtpTo.Size(1350,285)
+Gui.frmDash.dtpTo.Position(165,1095)
+Gui.frmDash.dtpTo.Parent("frameDT")
+Gui.frmDash.lbl2.Create(Label,"Start",True,645,255,0,135,300,True,0,"Arial",8,-2147483633,0)
+Gui.frmDash.lbl2.Parent("frameDT")
+Gui.frmDash.lbl3.Create(Label,"End",True,855,255,0,180,885,True,0,"Arial",8,-2147483633,0)
+Gui.frmDash.lbl3.Parent("frameDT")
+Gui.frmDash.txtCust.Create(TextBox,"",True,1215,300,0,1890,225,True,0,"Arial",8,-2147483643,1)
+Gui.frmDash.txtCust.Event(LostFocus,txtCust_LostFocus)
+Gui.frmDash.cmdCustBrowse.Create(Button)
+Gui.frmDash.cmdCustBrowse.Size(480,300)
+Gui.frmDash.cmdCustBrowse.Position(3150,225)
+Gui.frmDash.cmdCustBrowse.Caption("^")
+Gui.frmDash.cmdCustBrowse.Event(Click,cmdCustBrowse_Click)
+Gui.frmDash.txtcustname.Create(TextBox,"",True,5670,300,0,1905,600,True,0,"Arial",8,-2147483643,1)
+Gui.frmDash.txtcustname.Locked(True)
+Gui.frmDash.cmdRefresh.Create(Button)
+Gui.frmDash.cmdRefresh.Size(945,375)
+Gui.frmDash.cmdRefresh.Position(1920,1140)
+Gui.frmDash.cmdRefresh.Caption("Refresh")
+Gui.frmDash.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.frmDash.chkAllcustomers.Create(CheckBox)
+Gui.frmDash.chkAllcustomers.Size(1560,360)
+Gui.frmDash.chkAllcustomers.Position(3045,1125)
+Gui.frmDash.chkAllcustomers.Caption("All Customers")
+Gui.frmDash.chkSalesperson.Create(CheckBox)
+Gui.frmDash.chkSalesperson.Size(1320,360)
+Gui.frmDash.chkSalesperson.Position(4575,1125)
+Gui.frmDash.chkSalesperson.Caption("Salesperson")
+Gui.frmDash.chkSalesperson.Visible(False)
+Gui.frmDash.ddlsalesperson.Create(DropDownList)
+Gui.frmDash.ddlsalesperson.Size(2430,330)
+Gui.frmDash.ddlsalesperson.Position(5895,1140)
+Gui.frmDash.ddlsalesperson.Event(Click,ddlsalesperson_Click)
+Gui.frmDash.ddlsalesperson.Visible(False)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Global.sRet.Declare
+v.Local.lRet.Declare
+V.Global.bLoadData.Declare
+V.Global.lAPP.Declare
+'v.Global.sARC.Declare
+v.Global.bFilter.Declare
+v.Local.sSQL.Declare
+V.Local.dStart.Declare
+
+'Set Date to 1 yr back
+F.Intrinsic.Date.DateAdd("YYYY",-1,V.Ambient.Date,V.Local.dStart)
+gui.frmDash.dtpfrom.Value(V.Local.dStart)
+
+F.Intrinsic.ControL.If(V.Caller.Hook,=,26220)
+'Delete shipment mod
+'populate
+	Variable.Passed.000210.Set("VOID")
+	f.Intrinsic.Control.End
+F.Intrinsic.ControL.ElseIf(V.Caller.Hook,=,26274)
+'Script3
+	f.Intrinsic.Control.If(Variable.Passed.000210,=,"VOID")
+		Function.Intrinsic.UI.MsgBox("Are you sure you want to Void ?", "", 4,v.Local.lRet)
+		f.Intrinsic.Control.If(v.Local.lRet,=,6)
+			f.Intrinsic.Control.CallSub(Voidshipment)
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.End
+f.Intrinsic.Control.Else
+
+'Call Order Dashboard
+	V.Global.bLoadData.Set(True)
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		gui.frmDash..Caption("Quote DB(c)")
+		V.Global.lAPP.Set(51351) 
+	F.Intrinsic.Control.Else
+		gui.frmDash..Caption("Sales Order DB(c)")
+		V.Global.lAPP.Set(5135) 
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.UI.InvokeWaitDialog("Processing...")
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	
+		'SAVEDB
+	f.Data.DataTable.Create("DTSave",True)
+	f.Data.DataTable.AddColumn("DTSave","Order_no","string")
+	f.Data.DataTable.AddColumn("DTSave","UserFld1","string")
+	f.Data.DataTable.AddColumn("DTSave","UserFld2","string")
+	f.Data.DataTable.AddColumn("DTSave","UserFld3","string")
+	f.Data.DataTable.AddColumn("DTSave","UserFld4","string")
+	f.Data.DataTable.AddColumn("DTSave","UserFld5","string")
+'	f.Data.DataTable.AddRow("DTSave","Order_no","")
+	
+	
+	gui.frmDash.chkAllcustomers.Value(1)
+	f.Intrinsic.Control.CallSub(load_grid)
+
+	f.Intrinsic.Control.CallSub(Mergedata_New)
+	f.Intrinsic.Control.CallSub(Create_Menus)
+'	F.Intrinsic.Control.CallSub(Deserialize)
+	f.Intrinsic.Control.CallSub(checksecurity)
+	f.Intrinsic.Variable.ArgToVar("SEC",v.Global.sRet)
+	
+
+
+	f.Intrinsic.UI.CloseWaitDialog
+	gui.frmDash.GsGrid.Anchor(15)
+	gui.frmDash.cmdExport.Anchor(9)
+	
+	Gui.frmDash.cmdSaveFilter.Anchor(6)
+	Gui.frmDash.cmdReSetFilter.Anchor(6)
+	
+	F.Intrinsic.Control.CallSub(Load_Filter)
+	'gui.frmDash..WindowState(2)
+	F.Intrinsic.Control.CallSub(SetContextMenus)
+	
+'	v.Local.sSQL.Set("select RTRIM(v_CUSTOMER_SHIPTO.NAME_CUSTOMER_Ship) AS name,RTRIM(v_CUSTOMER_SHIPTO.CUSTOMER) AS CUSTOMER ")
+'	f.Intrinsic.String.Build(" {0} from customer_master join v_CUSTOMER_SHIPTO  on customer_master.customer = v_CUSTOMER_SHIPTO.customer where customer_master.rec = 3 and v_CUSTOMER_SHIPTO.CUSTOMER like '989%'  ORDER BY Customer" ,v.Local.sSQL,v.Local.sSQL) 
+
+
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+	v.Local.sSQL.Set("select RTRIM(v_CUSTOMER_SHIPTO.NAME_CUSTOMER_Ship) + ' ' + v_CUSTOMER_SHIPTO.CUSTOMER  AS name,RTRIM(v_CUSTOMER_SHIPTO.CUSTOMER) AS CUSTOMER ")
+	f.Intrinsic.String.Build(" {0} from customer_master join v_CUSTOMER_SHIPTO  on customer_master.customer = v_CUSTOMER_SHIPTO.customer where customer_master.rec = 3  ORDER BY Customer" ,v.Local.sSQL,v.Local.sSQL) 
+	f.Data.DataTable.CreateFromSQL("DTDIC","conx",v.Local.sSQL)
+
+'	F.Data.Dictionary.CreateFromSQL("Customer","conx",v.Local.sSQL)
+	F.Data.Dictionary.CreateFromDataTable("Customer","DTDIC","name","CUSTOMER")
+	
+	gui.frmDash.txtCust.AddAutoCompleteItem("Customer","Dictionary")
+	
+'	v.Local.sSQL.Set("select RTRIM(ID) AS ID,RTRIM(ucase(Name)) AS name from V_Salespersons ")
+'	F.Data.Dictionary.CreateFromSQL("SalesPer","conx",v.Local.sSQL)
+'	
+'	gui.frmDash.ddlsalesperson.AddItem("")
+'	gui.frmDash.ddlsalesperson.AddItems("Dictionary","SalesPer")
+	gui.frmDash..Show 
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.UI.CloseWaitDialog
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.frmDash_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.frmDash!frmFilter.Visible)
+	gui.frmDash.frmFilter.Visible(false)
+	gui.frmDash.cmdMaint.Visible(true)
+f.Intrinsic.Control.else
+	F.Intrinsic.Control.If(V.Global.bLoadData)
+		F.Intrinsic.Control.CallSub(Serialize)
+	F.Intrinsic.Control.EndIf
+	F.Data.DataTable.Close("DTLines")
+	F.ODBC.Connection!conx.Close
+	f.Intrinsic.Control.End 
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.frmDash_UnLoad.End
+
+Program.Sub.load_grid.Start
+F.Intrinsic.Control.SetErrorHandler("load_grid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sQuery.Declare 
+v.Local.i.Declare(long)
+v.Local.iTotClmn.Declare(long)
+v.Local.stitle.Declare 
+
+
+	F.Intrinsic.Control.If(v.DataTable.DTLines.Exists)
+		f.Data.DataTable.Close("DTLines$DTDet")
+		f.Data.DataTable.Close("DTLines")
+	f.Intrinsic.Control.endif	
+		
+	f.Data.DataTable.Create("DTLines",true)
+	Function.Data.Datatable.AddTable("DTLines","DTDet")
+	f.Data.DataTable.AddColumn("DTLines","DrillClmn","string")
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		f.Data.DataTable.AddColumn("DTLines","Quote_no","string")
+		f.Data.DataTable.AddColumn("DTLines","date_Quote","date")
+		F.Data.DataView.Create("DTLines","DVLines",22,"","date_Quote")
+		f.Data.DataTable.AddColumn("DTLines$DTDet","Quote_no","string")
+		f.Data.DataTable.AddColumn("DTLines$DTDet","Qty_Quoted","long")
+	f.Intrinsic.Control.Else
+		f.Data.DataTable.AddColumn("DTLines","Order_no","string")
+		f.Data.DataTable.AddColumn("DTLines","date_order","date")
+		F.Data.DataView.Create("DTLines","DVLines",22,"","date_order")
+		f.Data.DataTable.AddColumn("DTLines$DTDet","Order_no","string")
+		f.Data.DataTable.AddColumn("DTLines$DTDet","Qty_Ordered","long")
+	F.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Record_no","string")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Part","string")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Description","string")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Price","Float")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Discount_Price","Float")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Extension","float")
+	f.Data.DataTable.AddColumn("DTLines$DTDet","Line_Type","string")
+
+	f.Data.DataTable.AddColumn("DTLines","Customer","string")
+	f.Data.DataTable.AddColumn("DTLines","date_Due","date")
+	f.Data.DataTable.AddColumn("DTLines","Name_Customer_Ship","string")
+	f.Data.DataTable.AddColumn("DTLines","Mark_Info","string")
+	f.Data.DataTable.AddColumn("DTLines","User_1","string")
+	f.Data.DataTable.AddColumn("DTLines","User_2","string")
+	f.Data.DataTable.AddColumn("DTLines","User_3","string")
+	f.Data.DataTable.AddColumn("DTLines","User_4","string")
+	f.Data.DataTable.AddColumn("DTLines","User_5","string")
+	f.Data.DataTable.AddColumn("DTLines","Customer_PO","string")
+	f.Data.DataTable.AddColumn("DTLines","Name","string")
+	f.Data.DataTable.AddColumn("DTLines","Code_Sort","string")
+	f.Data.DataTable.AddColumn("DTLines","Ln_Extension","float")
+	f.Data.DataTable.AddColumn("DTLines","TotalWeight","string")
+	f.Data.DataTable.AddColumn("DTLines","Address_1_Ship","string")
+	f.Data.DataTable.AddColumn("DTLines","City_Ship","string")
+	f.Data.DataTable.AddColumn("DTLines","State_Ship","string")
+	f.Data.DataTable.AddColumn("DTLines","Code_Zip_Ship","string")
+	f.Data.DataTable.AddColumn("DTLines","Tracking_No","string")
+	f.Data.DataTable.AddColumn("DTLines","date_shipped","date")
+	
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		f.Data.DataTable.AddColumn("DTLines","Action","string","Delete")
+	F.Intrinsic.Control.EndIf
+	f.Data.DataTable.AddColumn("DTLines","Print","string","Print")
+	f.Data.DataTable.AddColumn("DTLines","Email","string","Email")
+
+	Function.Intrinsic.UI.InvokeWaitDialog("Loading Grid Layout...")
+
+	gui.frmDash.GsGrid.SuspendLayout 
+	
+	gui.frmDash.GsGrid.AddGridViewFromDataView("GridView","DTLines","DVLines")
+	gui.frmDash.GsGrid.GetColumnCount("GridView",v.Local.iTotClmn)
+	f.Intrinsic.Math.Sub(v.Local.iTotClmn,1,v.Local.iTotClmn)
+	f.Intrinsic.Control.For(v.Local.i,0,v.Local.iTotClmn,1)
+		gui.frmDash.GsGrid.GetColumnNamebyIndex("GridView",v.Local.i,v.Local.stitle)
+
+		gui.frmDash.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"HeaderFontBold","True")
+'		gui.frmDash.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"HeaderBackColor","#7FFF00")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"HeaderHAlignment","Center")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"HeaderWordWrap","wrap")
+
+		Gui.frmDash.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"CellTrimming","Character")
+	f.Intrinsic.Control.Next(v.Local.i)
+	
+	gui.frmDash.GsGrid.SetGridViewProperty("GridView", "ColumnPanelRowHeight", "40")
+	Gui.frmDash.GsGrid.SetGridviewProperty("GridView","OptionsViewRowAutoHeight",True)
+
+'	gui.frmDash.GsGrid.SetGridViewProperty("GridView", "ColumnPanelRowHeight", "35")
+
+'	Function.Data.DataTable.AddRowChangedEventHandler("DTLines","SAVEROW")
+	
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Quote_no","CellForeColor","Blue")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Quote_no","Caption","QuoteNo")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","date_Quote","Caption","Quote Date")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","date_Due","Caption","Quote Due")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Ln_Extension","Caption","Quote Total")
+		Gui.frmDash.GsGrid.SetColumnProperty("GridView","date_Quote","DisplayCustomDateTime","d")
+		
+		gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Action", "tagName1","NotEqual","1")
+		gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Action", "tagName1", "backcolor", "#D3D3D3")
+		gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Action", "tagName1","NotEqual","1")
+		gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Action", "tagName1", "FontBold", True)
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Action","MinWidth",60)
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Action","MaxWidth",60)
+	f.Intrinsic.Control.Else
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Order_no","CellForeColor","Blue")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Order_no","Caption","OrderNo")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","date_order","Caption","Order Date")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","date_Due","Caption","Order Due")
+		gui.frmDash.GsGrid.SetColumnProperty("GridView","Ln_Extension","Caption","Order Total")
+		Gui.frmDash.GsGrid.SetColumnProperty("GridView","date_order","DisplayCustomDateTime","d")
+	F.Intrinsic.Control.EndIf
+	
+	gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Print", "tagName1","NotEqual","1")
+	gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Print", "tagName1", "backcolor", "#D3D3D3")
+	gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Print", "tagName1","NotEqual","1")
+	gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Print", "tagName1", "FontBold", True)
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Print","MinWidth",50)
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Print","MaxWidth",50)
+	
+	gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Email", "tagName1","NotEqual","1")
+	gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Email", "tagName1", "backcolor", "#D3D3D3")
+	gui.frmDash.GsGrid.AddStyleFormatCOndition("GridView", "Email", "tagName1","NotEqual","1")
+	gui.frmDash.GsGrid.SetStyleFormatCOnditionProperty("GridView",  "Email", "tagName1", "FontBold", True)
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Email","MinWidth",50)
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Email","MaxWidth",50)
+	
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Customer","CellForeColor","Blue")
+
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","TotalWeight","Caption","Total Weight")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Name_Customer_Ship","Caption","ShipName")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Mark_Info","Caption","Mark Shipment")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_1","Caption","Instrument Code")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_2","Caption","Source")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_3","Caption","DestCountry")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_4","Caption","Document Alias")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_5","Caption","Frame")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Customer_PO","Caption","Customer PO")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Name","Caption","Salesperson")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Code_Sort","Caption","Customer Reference")
+	
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Address_1_Ship","Caption","ShipAddress")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","City_Ship","Caption","ShipCity")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","State_Ship","Caption","ShipState")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Code_Zip_Ship","Caption","ShipZip")
+	
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","Tracking_No","Caption","Tracking No")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","date_shipped","Caption","Date Shipped")
+	
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_1","CellBackColor","LightYellow")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_2","CellBackColor","LightYellow")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_3","CellBackColor","LightYellow")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_4","CellBackColor","LightYellow")
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","User_5","CellBackColor","LightYellow")
+	
+
+	
+	gui.frmDash.GsGrid.SetColumnProperty("GridView","DrillClmn","Fixed","Left")
+'	Gui.frmDash.GsGrid.SetColumnProperty("GridView","Action","VisibleIndex",v.Local.iTotClmn.--)
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","DrillClmn","VisibleIndex",0)
+
+
+	gui.frmDash.GsGrid.SetGridviewProperty("GridView","OptionsViewColumnAutoWidth",False)
+	gui.frmDash.GsGrid.SetGridviewProperty("GridView","Showgrouppanel",True)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","OptionsViewShowGroupPanel",True)
+	gui.frmDash.GsGrid.SetGridviewProperty("GridView","OptionsFindAlwaysVisible",True)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","AllowFilter",True)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView", "OptionsSelectionEnableAppearanceFocusedRow", "False") 
+	Gui.frmDash.GsGrid.SetGridviewProperty("GridView","Enableappearanceevenrow",True)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","MultiSelect",False)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","AllowSort",True)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","Editable",False)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","ReadOnly",True)
+	Gui.frmDash.GsGrid.SetGridviewProperty("GridView","OptionsViewRowAutoHeight","True")
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridView","OptionsViewShowAutoFilterRow",True)
+
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","TotalWeight","CellHAlignment","far")
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","Ln_Extension","CellHAlignment","far")
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","Ln_Extension","DisplayCustomNumeric","#,##0.00")
+
+	Gui.frmDash.GsGrid.AddSummaryItem("GridView","Ln_Extension","Ln_Extension","Sum","","","n")
+
+	
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","date_Due","DisplayCustomDateTime","d")
+	Gui.frmDash.GsGrid.SetColumnProperty("GridView","date_shipped","DisplayCustomDateTime","d")
+	
+	'-----------
+	F.Data.DataView.Create("DTLines$DTDet","DVDet")
+
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		f.Data.DataTable.AddRelation("DTLines","Quote_no","DTLines$DTDet","Quote_no")
+	f.Intrinsic.Control.Else
+		f.Data.DataTable.AddRelation("DTLines","Order_no","DTLines$DTDet","Order_no")
+	f.Intrinsic.Control.endif
+	
+	Gui.frmDash.GsGrid.AddGridViewFromDataView("GridviewDet","DTLines","DVDet")
+
+	
+	gui.frmDash.GsGrid.GetColumnCount("GridviewDet",v.Local.iTotClmn)
+	f.Intrinsic.Math.Sub(v.Local.iTotClmn,1,v.Local.iTotClmn)
+	f.Intrinsic.Control.For(v.Local.i,0,v.Local.iTotClmn,1)
+		gui.frmDash.GsGrid.GetColumnNamebyIndex("GridviewDet",v.Local.i,v.Local.stitle)
+
+		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet",v.Local.stitle,"HeaderFontBold","True")
+		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet",v.Local.stitle,"HeaderBackColor","lightblue")
+'		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet",v.Local.stitle,"HeaderHAlignment","Center")
+		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet",v.Local.stitle,"HeaderWordWrap","wrap")
+		Gui.frmDash.GsGrid.SetColumnProperty("GridviewDet",v.Local.stitle,"CellTrimming","Character")
+	f.Intrinsic.Control.Next(v.Local.i)
+	
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridviewDet","Editable",False)
+	Gui.frmDash.GsGrid.SetGridViewProperty("GridviewDet","ReadOnly",True)
+	
+	Gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Price","DisplayCustomNumeric","#,##0.00")
+	Gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Discount_Price","DisplayCustomNumeric","#,##0.00")
+	Gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Extension","DisplayCustomNumeric","#,##0.00")
+	gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Record_no","Caption","Line No")
+	gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Discount_Price","Caption","Discounted Price")
+	gui.frmDash.GsGrid.SetColumnProperty("GridviewDet","Line_Type","Caption","Line Type")
+	
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet", "Quote_no", "Visible", False)
+	f.Intrinsic.Control.Else
+		gui.frmDash.GsGrid.SetColumnProperty("GridviewDet", "Order_no", "Visible", False)
+	f.Intrinsic.Control.endif
+	
+	Function.Intrinsic.UI.CloseWaitDialog 
+	gui.frmDash.GsGrid.MainView("GridView")
+	gui.frmDash.GsGrid.ResumeLayout 
+	
+	F.Intrinsic.Control.CallSub(Deserialize)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("load_grid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.load_grid.End
+
+Program.Sub.GsGrid_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("load_grid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSO.Declare 
+v.Local.lPID.Declare 
+V.Local.sFileName.Declare
+v.Local.iCol.Declare
+V.Local.sCustomerNo.Declare
+V.Local.sExpression.Declare
+V.Local.sReturn.Declare
+V.Local.sTrackno.Declare
+V.Local.sParam.Declare
+V.Local.sFile.Declare
+V.Local.iRet.Declare
+
+
+f.Intrinsic.Control.BlockEvents 
+
+gui.frmDash.GsGrid.GetCellValueByColumnName("GridView","Customer",V.Args.RowIndex,V.Local.sCustomerNo)
+
+F.Intrinsic.Control.SelectCase(V.Args.Column)
+	F.Intrinsic.Control.CaseAny("Order_no","ORDER_NO")
+		gui.frmDash.GsGrid.GetCellValue("GridView",1,V.Args.RowIndex,V.Local.sSO)
+		f.Intrinsic.Control.if(v.Global.sRet(2),=,1)
+			F.Intrinsic.String.Concat(V.Local.sSO(0),"!*!","O","!*!","*!*ZDR*!*",V.Local.sSO)
+		f.Intrinsic.Control.elseif(v.Global.sRet(3),=,1)
+			F.Intrinsic.String.Concat(V.Local.sSO(0),"!*!","V","!*!","*!*ZDR*!*",V.Local.sSO)
+		f.Intrinsic.Control.endif
+'		gui.frmDash..Enabled(false)
+		f.Intrinsic.UI.InvokeWaitDialog("Opening Screen")
+		F.Global.General.CallWrapperAsync(200000,V.Local.sSO)
+'		gui.frmDash..Enabled(true)
+		f.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.CaseAny("Quote_no","QUOTE_NO")
+		gui.frmDash.GsGrid.GetCellValue("GridView",1,V.Args.RowIndex,V.Local.sSO)
+		f.Intrinsic.Control.if(v.Global.sRet(2),=,1)
+			F.Intrinsic.String.Build("{0}!*!O",V.Local.sSO,V.Local.sSO)	
+		f.Intrinsic.Control.elseif(v.Global.sRet(3),=,1)
+			F.Intrinsic.String.Build("{0}!*!V",V.Local.sSO,V.Local.sSO)	
+		f.Intrinsic.Control.endif
+'		gui.frmDash..Enabled(false)
+		f.Intrinsic.UI.InvokeWaitDialog("Opening Screen")
+		F.Global.General.CallWrapperAsync(251000,V.Local.sSO)
+'		gui.frmDash..Enabled(true)
+		f.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.CaseAny("Customer","CUSTOMER")
+		gui.frmDash.GsGrid.GetCellValue("GridView",0,V.Args.RowIndex,V.Local.sSO)
+		f.Intrinsic.Control.if(v.Global.sRet(0),=,1)
+			F.Intrinsic.String.Build("MODE::1*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::15",V.Local.sSO.Trim,V.Local.sSO)
+		f.Intrinsic.Control.elseif(v.Global.sRet(1),=,1)
+			F.Intrinsic.String.Build("MODE::9*!*COMPANY-NUMBER::{0}*!*COMPANY-TYPE::15",V.Local.sSO.Trim,V.Local.sSO)
+		f.Intrinsic.Control.endif
+		gui.frmDash..Enabled(false)
+		f.Intrinsic.UI.InvokeWaitDialog("Opening Screen")
+		Function.Global.CRM.Invoke(V.Local.sSO,v.Local.lPID)
+		gui.frmDash..Enabled(true)
+		f.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.CaseAny("Tracking_No","TRACKING_NO")
+		gui.frmDash.GsGrid.GetColumnIndexByName("GridView", "Tracking_No", v.Local.iCol)
+		gui.frmDash.GsGrid.GetCellValue("GridView",v.Local.iCol,V.Args.RowIndex,V.Local.sSO)
+		V.Local.sTrackno.Set(V.Local.sSO)
+		
+		gui.frmDash.GsGrid.GetCellValueByColumnName("GridView","Order_no",V.Args.RowIndex,V.Local.sSO)
+		f.Intrinsic.Control.If(V.Local.sSO.Trim,<>,"")
+			'Building expression
+			Function.Intrinsic.String.Build("Order_no = '{0}'",V.Local.sSO.trim,V.Local.sExpression)
+			F.Data.DataTable.Select("DTTrack",v.Local.sExpression,V.Local.sReturn)
+			F.Intrinsic.Control.If(V.Local.sReturn,<>,"***NORETURN***")
+				f.Intrinsic.String.Split(V.Local.sReturn,"*!*",V.Local.sReturn)
+				F.Intrinsic.Control.If(V.Local.sReturn.UBound,>,0)
+					gui.frmDash.LstTrack.ClearItems
+					f.Intrinsic.Control.For(v.Local.iCol,0,V.Local.sReturn.UBound,1)
+						gui.frmDash.LstTrack.AddItem(Variable.DataTable.DTTrack(V.Local.sReturn(v.Local.iCol)).Tracking_no!Fieldval)
+					f.Intrinsic.Control.Next(v.Local.iCol)
+					gui.frmDash.frameTracking.Visible(true)
+					gui.frmDash.GsGrid.enabled(false)
+				f.Intrinsic.Control.Else
+					f.Intrinsic.Control.CallSub(Show_Tracking,"TrackingNo",V.Local.sTrackno)
+				F.Intrinsic.Control.EndIf	
+			F.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Else
+			f.Intrinsic.Control.unBlockEvents 
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseAny("User_1","USER_1")
+		f.Intrinsic.Control.CallSub("UserFldBROW","FLD","H1","Custno",V.Local.sCustomerNo)
+		f.Intrinsic.Control.If(v.Args.RETFLD,<>,"False")
+			F.Data.DataTable.SetValue("DTLines",V.Args.RowIndex,"User_1",v.Args.RETFLD)
+			f.Intrinsic.Control.CallSub("SAVEROW","index",V.Args.RowIndex)
+		f.Intrinsic.Control.EndIf 	
+	F.Intrinsic.Control.CaseAny("User_2","USER_2")
+		f.Intrinsic.Control.CallSub("UserFldBROW","FLD","H2","Custno",V.Local.sCustomerNo)
+		f.Intrinsic.Control.If(v.Args.RETFLD,<>,"False")
+			F.Data.DataTable.SetValue("DTLines",V.Args.RowIndex,"User_2",v.Args.RETFLD)
+			f.Intrinsic.Control.CallSub("SAVEROW","index",V.Args.RowIndex)
+		f.Intrinsic.Control.EndIf 		
+	F.Intrinsic.Control.CaseAny("User_3","USER_3")
+		f.Intrinsic.Control.CallSub("UserFldBROW","FLD","H3","Custno",V.Local.sCustomerNo)
+		f.Intrinsic.Control.If(v.Args.RETFLD,<>,"False")
+			F.Data.DataTable.SetValue("DTLines",V.Args.RowIndex,"User_3",v.Args.RETFLD)
+			f.Intrinsic.Control.CallSub("SAVEROW","index",V.Args.RowIndex)
+		f.Intrinsic.Control.EndIf 	
+	F.Intrinsic.Control.CaseAny("User_4","USER_4")
+		f.Intrinsic.Control.CallSub("UserFldBROW","FLD","H4","Custno",V.Local.sCustomerNo)
+		f.Intrinsic.Control.If(v.Args.RETFLD,<>,"False")
+			F.Data.DataTable.SetValue("DTLines",V.Args.RowIndex,"User_4",v.Args.RETFLD)
+			f.Intrinsic.Control.CallSub("SAVEROW","index",V.Args.RowIndex)
+		f.Intrinsic.Control.EndIf 	
+	F.Intrinsic.Control.CaseAny("User_5","USER_5")
+		f.Intrinsic.Control.CallSub("UserFldBROW","FLD","H5","Custno",V.Local.sCustomerNo)
+		f.Intrinsic.Control.If(v.Args.RETFLD,<>,"False")
+			F.Data.DataTable.SetValue("DTLines",V.Args.RowIndex,"User_5",v.Args.RETFLD)
+			f.Intrinsic.Control.CallSub("SAVEROW","index",V.Args.RowIndex)
+		f.Intrinsic.Control.EndIf 	
+	F.Intrinsic.Control.CaseAny("Action","ACTION")
+		V.Local.sSQL.Declare(String)
+		f.Intrinsic.Control.BlockEvents 
+		f.Intrinsic.Control.CallSub(DELQuotes,"CurrRow",V.Args.RowIndex)
+		f.Data.DataTable.DeleteRow("DTLines",V.Args.RowIndex)
+		f.Data.DataTable.Acceptchanges("DTLines")
+		f.Intrinsic.Control.UnBlockEvents 
+		Gui.frmDash.GsGrid.FocusCell("GridView",0,1)
+	F.Intrinsic.Control.CaseAny("Print","PRINT")
+		f.Intrinsic.UI.InvokeWaitDialog("Printing .. please wait")
+		gui.frmDash.GsGrid.GetCellValue("GridView",1,V.Args.RowIndex,V.Local.sSO)
+		F.Intrinsic.String.Build("{0}!*!P!*!!*!",V.Local.sSO.Trim,V.Local.sSO)
+		F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+			F.Global.General.CallWrapperASync(920000,V.Local.sSO)
+		f.Intrinsic.Control.Else
+			F.Global.General.CallWrapperASync(910050,V.Local.sSO)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseAny("Email","EMAIL")
+		F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+			f.Intrinsic.String.Build("{0}\GCG_5358_Email_Quote_Pdf.gas",V.Caller.GasDir,V.Local.sFile)
+		f.Intrinsic.Control.Else
+			f.Intrinsic.String.Build("{0}\GCG_5358_order_ack_pdf.gas",V.Caller.GasDir,V.Local.sFile)
+		F.Intrinsic.Control.EndIf
+		
+		gui.frmDash.GsGrid.GetCellValue("GridView",1,V.Args.RowIndex,V.Local.sSO)
+		f.Intrinsic.String.Build("{0}@{1}",V.Local.sCustomerNo,V.Local.sSO,V.Local.sParam)
+		F.Global.Task.CallSyncGas(V.Local.sFile,V.Local.sParam,2)
+		
+f.Intrinsic.Control.EndSelect 	
+
+f.Intrinsic.Control.unBlockEvents 
+f.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("load_grid_Err")
+f.Intrinsic.Control.unBlockEvents
+f.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GsGrid_RowCellClick.End
+
+Program.Sub.Create_Menus.Start
+F.Intrinsic.Control.SetErrorHandler("Create_Menus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+	Gui.frmdash..ContextMenuCreate("MNUGRID")
+	Gui.frmdash.GsGrid.ContextMenuAttach("MNUGRID")
+'	Gui.Form..ContextMenuAddItem("MNUGRID","Refresh",0,"Refresh")
+	Gui.frmdash..ContextMenuAddItem("MNUGRID","ResetColumns",0,"Reset Columns")
+	Gui.frmdash..ContextMenuSetItemEventHandler("MNUGRID","ResetColumns","MenuResetColumns")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Create_Menus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Create_Menus.End
+
+Program.Sub.MenuResetColumns.Start
+F.Intrinsic.Control.SetErrorHandler("MenuResetColumns_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+	F.Intrinsic.Control.Case("MNUGRID")
+		F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GridView",V.Global.lAPP,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+		gui.frmDash..Visible(false)
+		
+		f.Intrinsic.Control.CallSub(load_grid)
+		gui.frmDash..Visible(true)
+F.Intrinsic.Control.EndSelect
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("MenuResetColumns_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.MenuResetColumns.End
+
+Program.Sub.Serialize.Start
+F.Intrinsic.Control.SetErrorHandler("Serialize_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSerialize.Declare 
+
+
+Gui.frmDash.GsGrid.Serialize("GridView",V.Local.sSerialize)
+F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GridView",V.Global.lAPP,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+
+Gui.frmDash.GsGrid.Serialize("GridviewDet",V.Local.sSerialize)
+F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GridviewDet",V.Global.lAPP,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Serialize_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+F.Intrinsic.Control.SetErrorHandler("Deserialize_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSerialize.Declare  
+
+
+
+
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GridView",V.Global.lAPP,1000,6,"",V.Local.sSerialize)
+F.Intrinsic.Control.If(V.Local.sSerialize.trim,<>,"")
+	Gui.frmDash.GsGrid.Deserialize(V.Local.sSerialize)
+F.Intrinsic.Control.EndIf
+
+F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"GridviewDet",V.Global.lAPP,1000,6,"",V.Local.sSerialize)
+F.Intrinsic.Control.If(V.Local.sSerialize.trim,<>,"")
+	Gui.frmDash.GsGrid.Deserialize(V.Local.sSerialize)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Deserialize_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Deserialize.End
+
+Program.Sub.CheckSecurity.Start
+F.Intrinsic.Control.SetErrorHandler("CheckSecurity_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.bRet.Declare
+v.Local.sRet.Declare(string,"0,0,0,0")
+
+f.Intrinsic.String.Split(v.Local.sRet,",",v.Local.sRet)
+'CRM Edit
+Function.Global.Security.CheckUserAccessIPM(243,0,v.Local.bRet)
+F.Intrinsic.Control.If(v.Local.bRet,=,True)
+	v.Local.sRet(0).Set("1")
+f.Intrinsic.Control.Else
+		'CRM 
+	Function.Global.Security.CheckUserAccessIPM(242,0,v.Local.bRet)
+	F.Intrinsic.Control.If(v.Local.bRet,=,True)
+		v.Local.sRet(1).Set("1")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+	'QO OPEN
+	Function.Global.Security.CheckUserAccessIPM(484,0,v.Local.bRet)
+	F.Intrinsic.Control.If(v.Local.bRet,=,True)
+		v.Local.sRet(2).Set("1")
+	f.Intrinsic.Control.Else
+			'QO View
+		Function.Global.Security.CheckUserAccessIPM(493,0,v.Local.bRet)
+		F.Intrinsic.Control.If(v.Local.bRet,=,True)
+			v.Local.sRet(3).Set("1")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Else
+	'Order OPEN
+	Function.Global.Security.CheckUserAccessIPM(132,0,v.Local.bRet)
+	F.Intrinsic.Control.If(v.Local.bRet,=,True)
+		v.Local.sRet(2).Set("1")
+	f.Intrinsic.Control.Else
+			'Order View
+		Function.Global.Security.CheckUserAccessIPM(131,0,v.Local.bRet)
+		F.Intrinsic.Control.If(v.Local.bRet,=,True)
+			v.Local.sRet(3).Set("1")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Variable.AddRV("SEC",v.Local.sRet)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckSecurity_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_5135_SODash.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CheckSecurity.End
+
+Program.Sub.cmdExport_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.bFileLocked.Declare 
+V.Local.sFileExport.Declare 
+V.Local.sMsg.Declare 
+V.Local.bExcel.Declare 
+
+F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+F.Intrinsic.Control.If(V.Local.bExcel)
+	F.Intrinsic.String.Build("{0}\GAB_5135_Export.xlsx",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+	F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+	F.Intrinsic.Control.If(V.Local.bFileLocked)
+		F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+	F.Intrinsic.Control.Else
+		Gui.frmDash.GsGrid.Export(V.Local.sFileExport,"xlsx")
+		F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}\GAB_5135_Export.csv",V.Caller.LocalGssTempDir,V.Local.sFileExport)
+	F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+	F.Intrinsic.Control.If(V.Local.bFileLocked)
+		F.Intrinsic.String.Build("File is already open. Please close and export again.{0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport,V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,"File In Use")
+	F.Intrinsic.Control.Else
+		Gui.frmDash.GsGrid.Export(V.Local.sFileExport,"csv")
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.Voidshipment.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sOrderno.Declare(String)
+V.Local.sOrderSuffix.Declare(String)
+
+V.Local.sOrderno.Set(Variable.Passed.000150)
+
+f.Intrinsic.Control.If(V.Local.sOrderno.Trim,<>,"")
+	f.Intrinsic.String.LPad(V.Local.sOrderno,"0",7,V.Local.sOrderno)
+	f.Intrinsic.String.LPad(Variable.Passed.000151,"0",4,V.Local.sOrderSuffix)
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	
+	f.Intrinsic.String.Build("update SHIPMENT_HEADER set TRACKING_FLAG = 0 Where order_NO = '{0}' and Order_Suffix = '{1}' and Record_TYPE = 'A'",V.Local.sOrderno,V.Local.sOrderSuffix,V.Local.sSql)
+	f.ODBC.Connection!Conx.execute(V.Local.sSql)
+	
+	F.ODBC.Connection!conx.Close
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Voidshipment.End
+
+Program.Sub.SetContextMenus.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+	Gui.frmDash..ContextMenuCreate("ctxSalesHist")
+	Gui.frmDash.GsGrid.ContextMenuAttach("ctxSalesHist")
+	Gui.frmDash..ContextMenuAddItem("ctxSalesHist","Refresh",0,"Refresh")
+	Gui.frmDash..ContextMenuAddItem("ctxSalesHist","Export",0,"Export")
+	Gui.frmDash..ContextMenuAddItem("ctxSalesHist","ResetColumns",0,"Reset Columns")
+	Gui.frmDash..ContextMenuSetItemEventHandler("ctxSalesHist","Refresh","MenuClickRefresh")
+	Gui.frmDash..ContextMenuSetItemEventHandler("ctxSalesHist","Export","MenuClickExport")
+	Gui.frmDash..ContextMenuSetItemEventHandler("ctxSalesHist","ResetColumns","MenuClickResetColumns")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.SetContextMenus.End
+
+Program.Sub.MenuClickRefresh.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.UI.InvokeWaitDialog("Loading data...")
+
+f.Intrinsic.Control.BlockEvents
+
+f.Intrinsic.Control.CallSub(MergeData_New)
+
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.Control.UnBlockEvents
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.MenuClickRefresh.End
+
+Program.Sub.MenuClickExport.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.CallSub(cmdExport_Click)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.MenuClickExport.End
+
+Program.Sub.MenuClickResetColumns.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+	F.Intrinsic.Control.SelectCase(V.Args.MenuName)
+		F.Intrinsic.Control.Case("CTXSALESHIST")
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GridView",V.Global.lAPP,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+			F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"GridviewDet",V.Global.lAPP,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,"")
+			F.Intrinsic.Control.CallSub(Load_Grid)
+	F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.MenuClickResetColumns.End
+
+Program.Sub.MergeData.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sQuery.Declare(String)
+V.Local.dStart.declare
+V.Local.dEnd.declare
+V.Local.sCustomer.Declare
+V.Local.sSalrep.Declare
+
+f.Intrinsic.Control.If(v.DataTable.DTTemp.Exists)
+	F.Data.DataTable.Close("DTTemp")
+f.Intrinsic.Control.EndIf
+
+V.Local.dStart.Set(V.Screen.frmDash!dtpfrom.Value)
+V.Local.dEnd.Set(V.Screen.frmDash!dtpTo.Value)
+
+
+f.Intrinsic.Control.If(v.Screen.frmDash!chkAllCustomers.Value,=,0)
+	V.Local.sCustomer.Set(V.Screen.frmDash!txtCust.text)
+	F.Intrinsic.String.Build(" and Hdr.Customer = '{0}'",V.Local.sCustomer.Trim,V.Local.sCustomer)
+f.Intrinsic.Control.Else
+	gui.frmDash.txtCust.Text("")
+	gui.frmDash.txtcustname.Text("")
+f.Intrinsic.Control.EndIf
+
+'salesperson
+f.Intrinsic.Control.If(v.Screen.frmDash!chkSalesperson.Value,=,1)
+	V.Local.sSalrep.Set(V.Screen.frmDash!ddlsalesperson.MetaData0)
+	F.Intrinsic.String.Build(" and Salesperson = '{0}'",V.Local.sSalrep.Trim,V.Local.sSalrep)
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Quote_no,Hdr.date_Quote,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,(select sum(extension) from V_Quote_Lines where Hdr.Quote_no = V_Quote_Lines.Quote_no and quote_won <> 'W' group by Quote_no) as Ln_Extension,",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} (select sum(weight) from V_Quote_Lines where Hdr.Quote_no = V_Quote_Lines.Quote_no and quote_won <> 'W' group by Quote_no) as TotalWeight,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Quote_Header Hdr join V_Quote_Lines Ln on Hdr.Quote_no = Ln.Quote_no ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} left join V_Quote_Ship_to on  Hdr.Quote_no = V_Quote_Ship_to.Quote_no and Hdr.Quote_Ship_id = V_Quote_Ship_to.Quote_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where quote_won <> 'W' ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} and Hdr.date_Quote >= '{1}' And Hdr.date_Quote <= '{2}' {3} {4}",V.Local.sQuery,V.Local.dStart.PervasiveDate,V.Local.dEnd.PervasiveDate,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+F.Intrinsic.Control.Else
+	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Order_no,Hdr.date_order,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,(select sum(extension) from V_Order_Lines where Hdr.order_no = V_Order_Lines.order_no and (qty_bo >0 or Line_type = 'C') group by Order_no) as Ln_Extension,",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} (select sum(weight) from V_Order_Lines where Hdr.order_no = V_Order_Lines.order_no and (qty_bo >0 or Line_type = 'C') group by Order_no) as TotalWeight,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Order_Header Hdr join V_Order_Lines Ln on Hdr.order_no = Ln.order_no ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} left join V_Order_Ship_to on  Hdr.order_no = V_Order_Ship_to.order_no and Hdr.Order_Ship_id = V_Order_Ship_to.Order_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where  (qty_bo >0 or Line_type = 'C')",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} and Hdr.date_order >= '{1}' And Hdr.date_order <= '{2}' {3} {4}",V.Local.sQuery,V.Local.dStart.PervasiveDate,V.Local.dEnd.PervasiveDate,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+F.Intrinsic.Control.EndIf
+
+	f.Data.DataTable.DeleteRow("DTLines")
+	Function.Data.DataTable.AcceptChanges("DTLines")
+	
+	F.Data.DataTable.CreateFromSQL("DTTemp","conx",v.Local.sQuery)
+	F.Data.DataTable.Merge("DTTemp","DTLines",False,2)
+	F.Data.DataTable.Close("DTTemp")
+	
+	F.Intrinsic.Control.If(V.Caller.Switches,<>,"Q")
+		F.Data.DataTable.CreateFromSQL("DTTemp","conx","select distinct H.Order_no,Tracking_no  from v_SHIPMENT_Header H join v_SHIPMENT_Lines L  on H.order_no= L.order_no and H.order_suffix = L.order_suffix and tracking_no <> '' ",true)
+		Function.Data.Dictionary.CreateFromDataTable("dict","DTTemp","Order_no","Tracking_no")
+		
+		Function.Data.Dictionary.SetDefaultReturn("dict","")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Order_no", "Tracking_No")
+		F.Data.Dictionary.Close("dict")
+		F.Data.DataTable.Close("DTTemp")
+		V.Local.sQuery.Set("select Hdr.order_no,V_Order_Lines.Record_no,Part,Description,Qty_Ordered,Price,Discount_Price,Extension,Line_Type from V_Order_Header Hdr join V_Order_Lines on  Hdr.Order_no = V_Order_Lines.Order_no ")
+		F.Intrinsic.String.Build(" {0} where Hdr.date_Order >= '{1}' And Hdr.date_Order <= '{2}' {3}",V.Local.sQuery,V.Local.dStart.PervasiveDate,V.Local.dEnd.PervasiveDate,V.Local.sCustomer,V.Local.sQuery)
+	f.Intrinsic.Control.else
+		V.Local.sQuery.Set("select Hdr.quote_no,V_Quote_Lines.Record_no,Part,Description,Qty_quoted,Price,Discount_Price,Extension,Line_Type from V_Quote_Header Hdr join V_Quote_Lines on  Hdr.Quote_no = V_Quote_Lines.Quote_no ")
+		F.Intrinsic.String.Build(" {0} where Hdr.date_Quote >= '{1}' And Hdr.date_Quote <= '{2}' {3}",V.Local.sQuery,V.Local.dStart.PervasiveDate,V.Local.dEnd.PervasiveDate,V.Local.sCustomer,V.Local.sQuery)
+	Function.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.DeleteRow("DTLines$DTDet")
+	Function.Data.DataTable.AcceptChanges("DTLines$DTDet")
+	
+	F.Data.DataTable.CreateFromSQL("DTTemp","conx",v.Local.sQuery)
+	F.Data.DataTable.Merge("DTTemp","DTLines$DTDet",False,2)
+	F.Data.DataTable.Close("DTTemp")
+	gui.frmDash.GsGrid.ResumeLayout 
+	
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.MergeData.End
+
+Program.Sub.UserFldBROW.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare
+V.Local.iWidth.Declare
+V.Local.sRet.Declare
+v.Local.sSQL.Declare
+
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("User Field","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("800","*!*",V.Local.iWidth)
+'select Key_Value from OE_USER_VALUES where Hdr_Key = 'H1' and (OE_USER_VALUES.CUST = 'DET415' OR OE_USER_VALUES.CUST <= '')
+f.Intrinsic.String.Build("select Key_Value from OE_USER_VALUES where Hdr_Key = '{0}' and (OE_USER_VALUES.CUST = '{1}' OR OE_USER_VALUES.CUST = '')",v.Args.Fld,v.Args.Custno,v.Local.sSQL)
+F.Intrinsic.UI.Browser("Select Part","conx",v.Local.sSQL,V.Local.sTitles,V.Local.iWidth,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+f.Intrinsic.Control.Else
+	V.Local.sRet.Set("False")
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Variable.AddRV("RETFLD",V.Local.sRet.trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.UserFldBROW.End
+
+Program.Sub.SAVEROW.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+	v.Local.sOrderno.Declare
+	v.Local.sUserFld1.Declare
+	v.Local.sUserFld2.Declare
+	v.Local.sUserFld3.Declare
+	v.Local.sUserFld4.Declare
+	v.Local.sUserFld5.Declare
+
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		v.Local.sOrderno.Set(Variable.DataTable.DTLines(Variable.args.index).Quote_no!Fieldval)
+	f.Intrinsic.Control.Else
+		v.Local.sOrderno.Set(Variable.DataTable.DTLines(Variable.args.index).Order_no!Fieldval)
+	F.Intrinsic.Control.EndIf
+	
+	v.Local.sUserFld1.Set(Variable.DataTable.DTLines(Variable.args.index).User_1!Fieldval)
+	v.Local.sUserFld2.Set(Variable.DataTable.DTLines(Variable.args.index).User_2!Fieldval)
+	v.Local.sUserFld3.Set(Variable.DataTable.DTLines(Variable.args.index).User_3!Fieldval)
+	v.Local.sUserFld4.Set(Variable.DataTable.DTLines(Variable.args.index).User_4!Fieldval)
+	v.Local.sUserFld5.Set(Variable.DataTable.DTLines(Variable.args.index).User_5!Fieldval)
+
+
+'	f.Data.DataTable.SetValue("DTSave",-1,"Orderno",v.Local.sOrderno,"UserFld1",v.Local.sUserFld1,"UserFld2",v.Local.sUserFld2,"UserFld3",v.Local.sUserFld3,"UserFld4",v.Local.sUserFld4,"UserFld5",v.Local.sUserFld5)
+
+	F.Data.DataTable.AddRow("DTSave","Order_no",v.Local.sOrderno,"UserFld1",v.Local.sUserFld1,"UserFld2",v.Local.sUserFld2,"UserFld3",v.Local.sUserFld3,"UserFld4",v.Local.sUserFld4,"UserFld5",v.Local.sUserFld5)
+
+
+	F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+		F.Data.DataTable.SaveToDB("DTSave","conx","QUOTE_HEADER","Order_no",256,"Order_no@!@Quote_no*!*UserFld1@!@User_1*!*UserFld2@!@User_2*!*UserFld3@!@User_3*!*UserFld4@!@User_4*!*UserFld5@!@User_5")
+	f.Intrinsic.Control.Else
+		F.Data.DataTable.SaveToDB("DTSave","conx","ORDER_HEADER","Order_no",256,"Order_no@!@Order_no*!*UserFld1@!@User_1*!*UserFld2@!@User_2*!*UserFld3@!@User_3*!*UserFld4@!@User_4*!*UserFld5@!@User_5")
+	f.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.SAVEROW.End
+
+Program.Sub.Show_Tracking.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSO.Declare
+
+f.Intrinsic.String.Mid(v.Args.TrackingNo,1,2,V.Local.sSO)
+f.Intrinsic.Control.If(V.Local.sSO,=,"1Z")
+	f.Intrinsic.String.Build("http://wwwapps.ups.com/WebTracking/track?track=yes&trackNums={0}",v.Args.TrackingNo.trim,V.Local.sSO)
+f.Intrinsic.Control.Elseif(V.Local.sSO.trim,<>,"")
+	f.Intrinsic.String.Build("https://www.fedex.com/apps/fedextrack/?action=track&trackingnumber={0}",v.Args.TrackingNo.trim,V.Local.sSO)
+f.Intrinsic.Control.EndIf 	
+F.Intrinsic.Task.ShellExec(V.Caller.Handle,"OPEN",V.Local.sSO,"","",5)
+		
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Show_Tracking.End
+
+Program.Sub.cmdTrackingExit_Click.Start
+	gui.frmDash.frameTracking.Visible(false)
+	gui.frmDash.GsGrid.enabled(true)
+Program.Sub.cmdTrackingExit_Click.End
+
+Program.Sub.LstTrack_DblClick.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+f.Intrinsic.Control.CallSub(Show_Tracking,"TrackingNo",v.Screen.frmDash!LstTrack.list(v.Screen.frmDash!LstTrack.ListIndex))
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.LstTrack_DblClick.End
+
+Program.Sub.cmdSaveFilter_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sActiveFilterString.Declare
+V.Local.sRet.Declare
+V.Local.sMessage.Declare
+
+V.Local.icurrow.Declare
+v.local.sTemp.Declare
+V.Local.iRet.Declare
+
+
+gui.frmDash.GsGrid.GetGridviewProperty("GridView","ActiveFilterString",V.Local.sActiveFilterString)
+f.Intrinsic.Control.If(V.Local.sActiveFilterString.Trim,=,"")
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+
+f.Intrinsic.Control.If(v.Screen.frmDash!ddlFilter.Listindex,=,-1,"or",v.Screen.frmDash!ddlFilter.Listindex,=,0)
+	Function.Intrinsic.UI.InputBox("Please enter a name for the Filter","Filter Info","",v.Local.sRet)
+
+	f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+
+	gui.frmDash.ddl1.AddItem(V.Local.sActiveFilterString)
+	gui.frmDash.ddlFilter.AddItem(v.Local.sRet)
+f.Intrinsic.Control.Else
+	f.Intrinsic.Control.If(v.Screen.frmDash!ddlFilter.listcount,=,1)
+	
+		Function.Intrinsic.UI.InputBox("Please enter a name for the Filter","Filter Info","",v.Local.sRet)
+		f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+			f.Intrinsic.Control.ExitSub
+		f.Intrinsic.Control.EndIf
+	
+		gui.frmDash.ddl1.AddItem(V.Local.sActiveFilterString)
+		gui.frmDash.ddlFilter.AddItem(v.Local.sRet)
+	f.Intrinsic.Control.Else
+		V.Local.sMessage.Set("Do you want to Edit selected Filter")
+		F.Intrinsic.UI.Msgbox(V.Local.sMessage,"Filter",4,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,=,6)
+		
+	'		f.Intrinsic.Control.If(V.DataTable.DTLines(v.Screen.frmSalesHist!ddlFilter.Listindex).Filter_Status!FieldVal,=,"Public")
+	'			f.Intrinsic.UI.Msgbox("Public Filter cannot  be Edited")
+	'			f.Intrinsic.Control.ExitSub
+	'		f.Intrinsic.Control.EndIf
+		
+			v.Local.sRet.set(v.Screen.frmDash!ddlFilter.text)
+			V.Local.icurrow.Set(v.Screen.frmDash!ddlFilter.Listindex)
+			f.Intrinsic.Math.Sub(V.Local.icurrow,1,V.Local.icurrow)
+			
+			f.Data.DataTable.DeleteRow("DTLinesFilter",V.Local.icurrow)
+			f.Data.DataTable.Acceptchanges("DTLinesFilter")
+	
+			gui.frmDash.ddl1.RemoveItem(v.Screen.frmDash!ddlFilter.Listindex)
+			gui.frmDash.ddlFilter.RemoveItem(v.Screen.frmDash!ddlFilter.Listindex)
+			
+			gui.frmDash.ddl1.AddItem(V.Local.sActiveFilterString)
+			gui.frmDash.ddlFilter.AddItem(v.local.sRet)
+
+		f.Intrinsic.Control.Else
+			Function.Intrinsic.UI.InputBox("Please enter a name for the Filter","Filter Info","",v.Local.sRet)
+			f.Intrinsic.Control.If(v.Local.sRet,=,"***CANCEL***")
+				f.Intrinsic.Control.ExitSub
+			f.Intrinsic.Control.EndIf
+		
+			gui.frmDash.ddlFilter.AddItem(v.Local.sRet)
+			gui.frmDash.ddl1.AddItem(V.Local.sActiveFilterString)
+			
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(ADDFilter,"FName",v.Local.sRet,"FValue",V.Local.sActiveFilterString)
+
+v.Global.bFilter.Set(True)
+f.Intrinsic.Math.Sub(v.Screen.frmDash!ddlFilter.ListCount,1,V.Local.iRet)
+Gui.frmDash.ddlFilter.ListIndex(V.Local.iRet)
+Gui.frmDash.ddl1.ListIndex(V.Local.iRet)
+v.Global.bFilter.Set(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	v.Global.bFilter.Set(False)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdSaveFilter_Click.End
+
+Program.Sub.cmdReSetFilter_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.frmDash.GsGrid.SetGridviewProperty("GridView","ActiveFilterString","")
+gui.frmDash.ddlFilter.ListIndex(0)
+gui.frmDash.ddl1.ListIndex(0)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdReSetFilter_Click.End
+
+Program.Sub.ddlFilter_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare
+
+'save mode
+f.Intrinsic.Control.If(v.Global.bFilter)
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+gui.frmDash.ddl1.ListIndex(v.Screen.frmDash!ddlFilter.Listindex)
+
+Function.Intrinsic.UI.InvokeWaitDialog("Loading Data...")
+
+gui.frmDash.GsGrid.enabled(false)
+gui.frmDash.GsGrid.SuspendLayout 
+
+gui.frmDash.GsGrid.SetGridviewProperty("GridView","ActiveFilterString",v.Screen.frmDash!ddl1.text)
+
+gui.frmDash.GsGrid.ResumeLayout 
+gui.frmDash.GsGrid.enabled(true)
+
+Function.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ddlFilter_Click.End
+
+Program.Sub.cmdMaint_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sActiveFilterString.Declare
+
+gui.frmDash.frmFilter.Zorder(0)
+gui.frmDash.frmFilter.Visible(true)
+gui.frmDash.cmdMaint.Visible(false)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdMaint_Click.End
+
+Program.Sub.ADDFilter.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRet.Declare
+
+Function.Data.DataTable.AddRowByMap("DTLinesFilter","Filter_Name*!*Filter_Status*!*Filter_Value*!*Filter_ARC*!*Filter_User",v.Args.FName,"Private",v.Args.FValue,v.Global.lAPP,v.Caller.User.Trim)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ADDFilter.End
+
+Program.Sub.Load_Filter.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sUser.Declare(String)
+v.Local.iTotClmn.Declare
+v.Local.stitle.Declare
+v.Local.sARC.Declare
+v.Local.i.Declare
+
+V.Local.sUser.Set(v.Caller.User.trim)
+	
+'f.Intrinsic.String.Split(Variable.Caller.scriptfile,"\",v.Local.sARC)
+'v.Local.sARC.Set(v.Local.sARC(v.Local.sARC.ubound))
+
+'f.Intrinsic.String.Mid(v.Local.sARC,5,3,v.Global.sARC)
+
+
+f.Intrinsic.String.Build("select Filter_Name,Filter_Status,Filter_Value,Filter_ARC,Filter_User from GCG_5135_Filter where Filter_User = '{0}' and Filter_ARC = {1}",V.Local.sUser,V.Global.lAPP,V.Local.sSQL)
+f.Intrinsic.String.Build(" {0} union select Filter_Name,Filter_Status,Filter_Value,Filter_ARC,Filter_User from GCG_5135_Filter where Filter_Status = 'Public' and Filter_ARC = {1}",V.Local.sSQL,V.Global.lAPP,V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("DTLinesFilter","conx",v.Local.sSQL,True)
+F.Data.DataView.Create("DTLinesFilter","DVLines")
+
+
+gui.frmDash.ddlFilter.AddItem("")
+gui.frmDash.ddl1.AddItem("")
+
+gui.frmDash.ddlFilter.AddItems("DataTable","DTLinesFilter","Filter_Name","Filter_Name")
+gui.frmDash.ddl1.AddItems("DataTable","DTLinesFilter","Filter_Value","Filter_Value")
+
+f.Data.DataTable.AddColumn("DTLinesFilter","Action","string","Delete")
+
+gui.frmDash.GsGridFilter.AddGridViewFromDataView("GridViewFilter","DTLinesFilter","DVLines")
+'gui.frmSummary.GsGrid.SetGridViewProperty("GridView", "ColumnPanelRowHeight", "40")
+
+gui.frmDash.GsGridFilter.GetColumnCount("GridViewFilter",v.Local.iTotClmn)
+f.Intrinsic.Math.Sub(v.Local.iTotClmn,1,v.Local.iTotClmn)
+f.Intrinsic.Control.For(v.Local.i,0,v.Local.iTotClmn,1)
+	gui.frmDash.GsGridFilter.GetColumnNamebyIndex("GridViewFilter",v.Local.i,v.Local.stitle)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter",v.Local.stitle,"AllowEdit",False)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter",v.Local.stitle,"ReadOnly",True)
+
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter",v.Local.stitle,"HeaderFontBold","True")
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter",v.Local.stitle,"HeaderBackColor","#7FFF00")
+'	gui.frmSummary.GsGrid.SetColumnProperty("GridView",v.Local.stitle,"HeaderHAlignment","Center")
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter",v.Local.stitle,"HeaderWordWrap","wrap")
+f.Intrinsic.Control.Next(v.Local.i)
+
+	Function.Data.DataTable.AddRowChangedEventHandler("DTLinesFilter","SaveFilter")
+
+	gui.frmDash.GsGridFilter.ColumnEdit("GridViewFilter","Filter_Status","Dropdownlist","Private*!*Public")
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Status","AllowEdit",True)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Status","ReadOnly",False)
+	
+	gui.frmDash.GsGridFilter.AddStyleFormatCOndition("GridViewFilter", "Action", "tagName1","NotEqual","1")
+	gui.frmDash.GsGridFilter.SetStyleFormatCOnditionProperty("GridViewFilter",  "Action", "tagName1", "backcolor", "#D3D3D3")
+
+	gui.frmDash.GsGridFilter.AddStyleFormatCOndition("GridViewFilter", "Action", "tagName1","NotEqual","1")
+	gui.frmDash.GsGridFilter.SetStyleFormatCOnditionProperty("GridViewFilter",  "Action", "tagName1", "FontBold", True)
+	
+	Gui.frmDash.GsGridFilter.SetGridviewProperty("GridViewFilter","OptionsViewRowAutoHeight","True")
+
+'	gui.frmSummary.GsGrid.SetColumnProperty("GridView","Part","MinWidth",120)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Value","MinWidth",200)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter", "Filter_Value", "CellWordWrap", "Wrap")
+	
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Action","MinWidth",60)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Action","MaxWidth",60)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Status","MinWidth",60)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Status","MaxWidth",60)
+
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter", "Filter_ARC", "Visible", False)
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter", "Filter_User", "Visible", False)
+
+'	gui.frmSalesHist.GsGrid.SetColumnProperty("GridView","Status","VisibleIndex",2)
+
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Name","Caption","Filter Name")
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Value","Caption","Filter")
+	gui.frmDash.GsGridFilter.SetColumnProperty("GridViewFilter","Filter_Status","Caption","Status")
+	
+	
+	gui.frmDash.GsGridFilter.SetGridviewProperty("GridViewFilter","OptionsSelectionEnableAppearanceFocusedRow","False")
+	
+	gui.frmDash.GsGridFilter.MainView("GridViewFilter")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Load_Filter.End
+
+Program.Sub.GsGridFilter_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+v.Local.lrow.Declare
+
+f.Intrinsic.Control.BlockEvents 
+f.Intrinsic.Control.If(V.Args.column,=,"Action")
+
+	f.Intrinsic.String.Build("delete from GCG_5135_Filter where Filter_User = '{0}' and Filter_Name = '{1}'",v.Caller.User.Trim,v.DataTable.DTLinesFilter(V.Args.RowHandle).Filter_Name!fieldval,V.Local.sSQL)
+	f.ODBC.Connection!conx.execute(V.Local.sSQL)
+	
+	f.Intrinsic.Math.Add(V.Args.RowHandle,1,v.Local.lrow)
+	gui.frmDash.ddlFilter.RemoveItem(v.Local.lrow)
+	gui.frmDash.ddl1.RemoveItem(v.Local.lrow)
+	
+	f.Data.DataTable.DeleteRow("DTLinesFilter",V.Args.RowHandle)
+	f.Data.DataTable.Acceptchanges("DTLinesFilter")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.UnBlockEvents 
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	f.Intrinsic.Control.UnBlockEvents 
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.GsGridFilter_RowCellClick.End
+
+Program.Sub.cmdclose_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+gui.frmDash.frmFilter.Visible(False)
+gui.frmDash.cmdMaint.Visible(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdclose_Click.End
+
+Program.Sub.SaveFilter.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Data.DataTable.SaveToDB("DTLinesFilter","conx","GCG_5135_Filter","Filter_Name*!*Filter_User*!*Filter_ARC",256,"Filter_Name@!@Filter_Name*!*Filter_Status@!@Filter_Status*!*Filter_Value@!@Filter_Value*!*Filter_ARC@!@Filter_ARC*!*Filter_User@!@Filter_User")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SaveFilter.End
+
+Program.Sub.cmdCustBrowse_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTitles.Declare
+V.Local.iWidth.Declare
+V.Local.sRet.Declare
+v.Local.sSQL.Declare
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("Customer Name*!*Customer*!*ADDRESS1_Ship*!*ADDRESS2_Ship*!*CITY_Ship*!*STATE_Ship*!*Code_ZIP_Ship*!*Tele","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1500*!*800*!*1300*!*1000*!*1000*!*800*!*800*!*1200","*!*",V.Local.iWidth)
+
+v.Local.sSQL.Set("select NAME_CUSTOMER_Ship AS 'Customer Name',v_CUSTOMER_SHIPTO.CUSTOMER AS Customer,ADDRESS1_Ship,ADDRESS2_Ship,CITY_Ship,STATE_Ship,Code_ZIP_Ship,Tele ")
+f.Intrinsic.String.Build(" {0} from customer_master join v_CUSTOMER_SHIPTO  on customer_master.customer = v_CUSTOMER_SHIPTO.customer where customer_master.rec = 3 ORDER BY Customer" ,v.Local.sSQL,v.Local.sSQL) 
+
+F.Intrinsic.UI.Browser("Select Customer","conx",v.Local.sSQL,V.Local.sTitles,V.Local.iWidth,12000,15000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.frmDash.txtCust.Text(V.Local.sRet(1))
+	Gui.frmDash.txtCustName.Text(V.Local.sRet(0))
+
+	Gui.frmDash.chkAllCustomers.Value(0)
+	F.Intrinsic.Control.CallSub(cmdRefresh_Click)
+f.Intrinsic.Control.Else
+	V.Local.sRet.Set("False")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdCustBrowse_Click.End
+
+Program.Sub.cmdRefresh_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.frmDash!chkSalesperson.Value,=,1)
+	f.Intrinsic.Control.If(v.Screen.frmDash!ddlsalesperson.listindex,<,1)
+		f.Intrinsic.UI.Msgbox("Invalid Salesperson")
+		gui.frmDash.ddlsalesperson.SetFocus
+		F.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(MenuClickRefresh)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.txtCust_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sTxt.Declare
+V.Local.sRet.Declare
+
+
+V.Local.sTxt.Set(v.Screen.frmDash!txtCust.text)
+
+f.Intrinsic.Control.If(V.Local.sTxt.trim,=,"")
+	F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+gui.frmDash.txtCust.Text(V.Local.sTxt.UCase)
+Function.Data.Dictionary.ReturnKeyFromValue("Customer",V.Local.sTxt.UCase,V.Local.sRet)
+gui.frmDash.txtCustName.Text(V.Local.sRet)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,=,21087)
+	f.Intrinsic.Control.If(v.Screen.frmDash!txtCust.text,<>,"")
+		gui.frmDash.txtCustName.Text("")
+		F.Intrinsic.UI.Msgbox("Invalid Customer selection")
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.elseIf(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.txtCust_LostFocus.End
+
+Program.Sub.ddlsalesperson_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTxt.Declare
+V.Local.sRet.Declare
+
+V.Local.sTxt.Set(v.Screen.frmDash!ddlsalesperson.text)
+
+f.Intrinsic.Control.If(V.Local.sTxt.trim,=,"")
+	F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+Function.Data.Dictionary.ReturnKeyFromValue("SalesPer",V.Local.sTxt.UCase,V.Local.sRet)
+gui.frmDash.ddlsalesperson.SetMetaData(V.Local.sRet)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ddlsalesperson_Click.End
+
+Program.Sub.DELQuotes.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare
+
+
+f.Intrinsic.String.Build("delete from Quote_Header where Quote_No = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+f.Intrinsic.String.Build("delete from Quote_Lines where Quote_No = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+
+f.Intrinsic.String.Build("delete from QUOTE_BILL_TO where Quote_No = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+
+f.Intrinsic.String.Build("delete from QUOTE_SHIP_TO where Quote_No = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+
+f.Intrinsic.String.Build("delete from QUOTE_HF_TEXT where Quote_No = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+
+f.Intrinsic.String.Build("delete from QUOTE_LN_TEXT where Quote_number = '{0}'",v.DataTable.DTLines(V.Args.CurrRow).Quote_No!fieldval,V.Local.sSQL)
+f.ODBC.Connection!conx.execute(V.Local.sSQL)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.DELQuotes.End
+
+Program.Sub.MergeData_New.Start
+
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sQuery.Declare(String)
+V.Local.dStart.declare
+V.Local.dEnd.declare
+V.Local.sCustomer.Declare
+V.Local.sSalrep.Declare
+
+
+F.Intrinsic.UI.InvokeWaitDialog("Processing...")
+
+	F.Intrinsic.Control.If(V.ODBC.conx.State,=,1)
+		F.ODBC.Connection!conx.Close
+		F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	f.Intrinsic.Control.endif
+
+f.Intrinsic.Control.If(v.DataTable.DTTemp.Exists)
+	F.Data.DataTable.Close("DTTemp")
+f.Intrinsic.Control.EndIf
+
+V.Local.dStart.Set(V.Screen.frmDash!dtpfrom.Value)
+V.Local.dEnd.Set(V.Screen.frmDash!dtpTo.Value)
+
+
+f.Intrinsic.Control.If(v.Screen.frmDash!chkAllCustomers.Value,=,0)
+	V.Local.sCustomer.Set(V.Screen.frmDash!txtCust.text)
+	F.Intrinsic.String.Build(" and Hdr.Customer = '{0}'",V.Local.sCustomer.Trim,V.Local.sCustomer)
+f.Intrinsic.Control.Else
+	gui.frmDash.txtCust.Text("")
+	gui.frmDash.txtcustname.Text("")
+f.Intrinsic.Control.EndIf
+
+'salesperson
+f.Intrinsic.Control.If(v.Screen.frmDash!chkSalesperson.Value,=,1)
+	V.Local.sSalrep.Set(V.Screen.frmDash!ddlsalesperson.MetaData0)
+	F.Intrinsic.String.Build(" and Salesperson = '{0}'",V.Local.sSalrep.Trim,V.Local.sSalrep)
+f.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+'	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Quote_no,Hdr.date_Quote,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+'	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,(select sum(extension) from V_Quote_Lines where Hdr.Quote_no = V_Quote_Lines.Quote_no and quote_won <> 'W' group by Quote_no) as 'Ln_Extension',",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} (select sum(weight) from V_Quote_Lines where Hdr.Quote_no = V_Quote_Lines.Quote_no and quote_won <> 'W' group by Quote_no) as 'Total Weight',Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Quote_Header Hdr join V_Quote_Lines Ln on Hdr.Quote_no = Ln.Quote_no ",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} left join V_Quote_Ship_to on  Hdr.Quote_no = V_Quote_Ship_to.Quote_no and Hdr.Quote_Ship_id = V_Quote_Ship_to.Quote_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where quote_won <> 'W' ",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} {1} {2}",V.Local.sQuery,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+'F.Intrinsic.Control.Else
+'	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Order_no,Hdr.date_order,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+'	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,(select sum(extension) from V_Order_Lines where Hdr.order_no = V_Order_Lines.order_no and (qty_bo >0 or Line_type = 'C') group by Order_no) as 'Ln_Extension',",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} (select sum(weight) from V_Order_Lines where Hdr.order_no = V_Order_Lines.order_no and (qty_bo >0 or Line_type = 'C') group by Order_no) as 'Total Weight',Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Order_Header Hdr join V_Order_Lines Ln on Hdr.order_no = Ln.order_no ",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} left join V_Order_Ship_to on  Hdr.order_no = V_Order_Ship_to.order_no and Hdr.Order_Ship_id = V_Order_Ship_to.Order_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where  (qty_bo >0 or Line_type = 'C')",V.Local.sQuery,V.Local.sQuery)
+'	F.Intrinsic.String.Build(" {0} {1} {2}",V.Local.sQuery,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+'F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"Q")
+	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Quote_no,Hdr.date_Quote,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,0 as Ln_Extension,",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} 0 as TotalWeight,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Quote_Header Hdr join V_Quote_Lines Ln on Hdr.Quote_no = Ln.Quote_no ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} left join V_Quote_Ship_to on  Hdr.Quote_no = V_Quote_Ship_to.Quote_no and Hdr.Quote_Ship_id = V_Quote_Ship_to.Quote_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where quote_won <> 'W' ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} {1} {2}",V.Local.sQuery,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+F.Intrinsic.Control.Else
+	V.Local.sQuery.Set("select distinct Hdr.Customer,Hdr.Order_no,Hdr.date_order,Hdr.date_Due,Name_Customer_Ship,Mark_Info,Hdr.User_1,Hdr.User_2,Hdr.User_3,Hdr.User_4,Hdr.User_5,Customer_PO,")
+	F.Intrinsic.String.Build(" {0} V_Salespersons.Name,Hdr.Code_Sort,0 as Ln_Extension,",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} 0 as TotalWeight,Address_1_Ship,City_Ship,State_Ship,Code_Zip_Ship,Tracking_No,date_shipped from V_Order_Header Hdr join V_Order_Lines Ln on Hdr.order_no = Ln.order_no ",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} left join V_Order_Ship_to on  Hdr.order_no = V_Order_Ship_to.order_no and Hdr.Order_Ship_id = V_Order_Ship_to.Order_Ship_ID left join V_Salespersons on V_Salespersons.ID = Salesperson where  (qty_bo >0 or Line_type = 'C')",V.Local.sQuery,V.Local.sQuery)
+	F.Intrinsic.String.Build(" {0} {1} {2}",V.Local.sQuery,V.Local.sCustomer,V.Local.sSalrep,V.Local.sQuery)
+F.Intrinsic.Control.EndIf
+
+	f.Data.DataTable.DeleteRow("DTLines")
+	Function.Data.DataTable.AcceptChanges("DTLines")
+	
+	
+F.Intrinsic.Control.Label("ReconnectDB")
+	
+	F.Data.DataTable.CreateFromSQL("DTTemp","conx",v.Local.sQuery)
+	F.Data.DataTable.Merge("DTTemp","DTLines",False,2)
+	F.Data.DataTable.Close("DTTemp")
+	
+	F.Intrinsic.Control.If(V.Caller.Switches,<>,"Q")
+	
+		f.Intrinsic.Control.If(v.DataTable.DTTrack.Exists)
+			F.Data.DataTable.Close("DTTrack")
+		f.Intrinsic.Control.EndIf
+
+		F.Data.DataTable.CreateFromSQL("DTTrack","conx","select distinct H.Order_no,Tracking_no  from v_SHIPMENT_Header H join v_SHIPMENT_Lines L  on H.order_no= L.order_no and H.order_suffix = L.order_suffix and tracking_no <> '' ",true)
+		Function.Data.Dictionary.CreateFromDataTable("dict","DTTrack","Order_no","Tracking_no")
+		
+		Function.Data.Dictionary.SetDefaultReturn("dict","")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Order_no", "Tracking_No")
+		F.Data.Dictionary.Close("dict")
+'		F.Data.DataTable.Close("DTTemp")
+		
+		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Order_no,sum(extension) from V_Order_Lines where (qty_bo >0 or Line_type = 'C') group by Order_no")
+		Function.Data.Dictionary.SetDefaultReturn("dict","0")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Order_no", "Ln_Extension")
+		F.Data.Dictionary.Close("dict")
+		
+'		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Order_no,sum(weight) from V_Order_Lines where  (qty_bo >0 or Line_type = 'C') group by Order_no")
+		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Order_no,sum(Inv.lbs*qty_ordered) from V_Order_Lines ORD join INVENTORY_MST2 Inv on ORD.part = Inv.part and  ORD.location = Inv.location where  (qty_bo >0 or Line_type = 'C') group by Order_no")
+		Function.Data.Dictionary.SetDefaultReturn("dict","0")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Order_no", "TotalWeight")
+		F.Data.Dictionary.Close("dict")
+		
+
+		V.Local.sQuery.Set("select Hdr.order_no,V_Order_Lines.Record_no,Part,Description,Qty_Ordered,Price,Discount_Price,Extension,Line_Type from V_Order_Header Hdr join V_Order_Lines on  Hdr.Order_no = V_Order_Lines.Order_no ")
+		F.Intrinsic.String.Build(" {0} where (qty_bo >0 or Line_type = 'C') {1}",V.Local.sQuery,V.Local.sCustomer,V.Local.sQuery)
+		
+	f.Intrinsic.Control.else
+
+		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Quote_no,sum(extension) from V_Quote_Lines where  quote_won <> 'W' group by Quote_no")
+		Function.Data.Dictionary.SetDefaultReturn("dict","0")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Quote_no", "Ln_Extension")
+		F.Data.Dictionary.Close("dict")
+		
+'		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Quote_no,sum(weight) from V_Quote_Lines where  quote_won <> 'W' group by Quote_no")
+		Function.Data.Dictionary.CreateFromSQL("dict","conx","select Quote_no,sum(Inv.lbs*qty_quoted) from V_Quote_Lines ORD join INVENTORY_MST2 Inv on ORD.part = Inv.part and  ORD.location = Inv.location where  quote_won <> 'W' group by Quote_no")
+		Function.Data.Dictionary.SetDefaultReturn("dict","0")
+		F.Data.dataTable.FillFromDictionary("DTLines", "dict","Quote_no", "TotalWeight")
+		F.Data.Dictionary.Close("dict")
+		
+		V.Local.sQuery.Set("select Hdr.quote_no,V_Quote_Lines.Record_no,Part,Description,Qty_quoted,Price,Discount_Price,Extension,Line_Type from V_Quote_Header Hdr join V_Quote_Lines on  Hdr.Quote_no = V_Quote_Lines.Quote_no ")
+		F.Intrinsic.String.Build(" {0} where quote_won <> 'W' {1}",V.Local.sQuery,V.Local.sCustomer,V.Local.sQuery)
+		
+	Function.Intrinsic.Control.EndIf
+	
+	f.Data.DataTable.DeleteRow("DTLines$DTDet")
+	Function.Data.DataTable.AcceptChanges("DTLines$DTDet")
+	
+	F.Data.DataTable.CreateFromSQL("DTTemp","conx",v.Local.sQuery)
+	F.Data.DataTable.Merge("DTTemp","DTLines$DTDet",False,2)
+	F.Data.DataTable.Close("DTTemp")
+	gui.frmDash.GsGrid.ResumeLayout 
+	
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,=,21025)
+	F.ODBC.Connection!conx.OpenCompanyConnection(300)
+	f.Intrinsic.Control.GoTo("ReconnectDB")
+F.Intrinsic.Control.elseIf(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.MergeData_New.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_5135_SODash$}$MLA$}$6/17/2018 7:54:14 AM$}$False
+Program.Sub.Comments.End
