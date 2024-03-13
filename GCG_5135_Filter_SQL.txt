@@ -1,0 +1,7 @@
+CREATE TABLE "GCG_5135_Filter"(
+ "Filter_Name" VARCHAR(20) NOT NULL ,
+ "Filter_Status" VARCHAR(7),
+ "Filter_Value" VARCHAR(200),
+ "Filter_ARC" INTEGER NOT NULL ,
+ "Filter_User" VARCHAR(5) NOT NULL ,
+ PRIMARY KEY ("Filter_Name", "Filter_ARC", "Filter_User"));
